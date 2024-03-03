@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LOGIN.css">
+    <title>BeatSpot - Iniciar Sesión</title>
+</head>
+<body>
+    <div class="container">
+        <img src="Logo2.png" alt="Icono de música" class="music-icon">
+        <h2 class="title">Iniciar Sesión en BeatSpot</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Usuario o Correo Electrónico:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+            <p class="error-message" id="error-message"></p>
+        </form>
+        <p class="signup-link">¿Nuevo aquí? <a href="REGISTRO.html">Regístrate</a></p>
+    </div>
+    <script src="LOGIN.js"></script>
+</body>
+</html>
