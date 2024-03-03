@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/PANTALLADEINICIO/INICIO.css">
+    <title>BeatSpot - Página Principal</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a class="navbar-brand" href="/PANTALLADEINICIO/INICIO.html">
+                <img src="/LOGIN Y REGISTRO/Logo2.png" sidth="775" height="80">
+            </a>            <h1 class="title">BeatSpot</h1>
+            <nav>
+                <a href="./INICIO.html">Inicio</a>
+                <a href="/ruta-de-listas.html">Listas de Reproducción</a>
+                <a href="/PERFILUSUARIO/PUSUARIO.html">Perfil</a>
+            </nav>
+            
+
+        </header>
+        <section class="song-list">
+            <article class="song" data-audio="/PANTALLADEINICIO/Linkin Park - Lost.mp3">
+                <img src="LP.jpg" alt="Portada del Álbum 1" class="album-cover">
+                <div class="song-details">
+                    <h3 class="song-title">Lost</h3>
+                    <p class="artist">Linkin Park</p>
+                    <p class="uploader">Subido por: Vector</p>
+                    <p class="plays">Reproducciones: 100</p>
+                </div>
+                <button class="play-button" onclick="togglePlayPause(this)">▶️ Reproducir</button>
+                <button class="like-button" onclick="toggleLike('playButton1')">❤️ Like</button>
+                <p class="likes-count" id="likesCount1">Likes: 0</p>
+
+                <audio class="audio-element" src="/PANTALLADEINICIO/Linkin Park - Lost.mp3"></audio>
+            </article>
+            <!-- Repite esta estructura para más canciones -->
+
+            <article class="song" data-audio="/PANTALLADEINICIO/Doing It Right- Daft Punk.mp3">
+                <img src="DP.jpeg" alt="Portada del Álbum 2" class="album-cover">
+                <div class="song-details">
+                    <h3 class="song-title">Doin' it Right</h3>
+                    <p class="artist">Daft Punk</p>
+                    <p class="uploader">Subido por: Vector </p>
+                    <p class="plays">Reproducciones: 150</p>
+                </div>
+                <button class="play-button" onclick="togglePlayPause(this)">▶️ Reproducir</button>
+                <audio class="audio-element" src="/PANTALLADEINICIO/Doing It Right- Daft Punk.mp3"></audio>
+            </article>
+
+            <article class="song" data-audio="/PANTALLADEINICIO/Doing It Right- Daft Punk.mp3">
+                <img src="ACDC.jpg" alt="Portada del Álbum 2" class="album-cover">
+                <div class="song-details">
+                    <h3 class="song-title">Back In Black</h3>
+                    <p class="artist">AC/DC</p>
+                    <p class="uploader">Subido por: Vector </p>
+                    <p class="plays">Reproducciones: 250</p>
+                </div>
+                <button class="play-button" onclick="togglePlayPause(this)">▶️ Reproducir</button>
+                <audio class="audio-element" src="/PANTALLADEINICIO/DC - Back In Black.m4a"></audio>
+            </article>
+
+        </section>
+        <section class="features">
+            <div class="search">
+                <label for="searchInput">Buscar:</label>
+                <input type="text" id="searchInput" placeholder="Buscar canciones, artistas, etc.">
+                <!-- Dentro de la sección .search -->
+                <button id="searchButton">Buscar</button>
+
+            </div>
+            <div class="filters">
+                <h2>Filtros</h2>
+                <button class="filter-btn">Pop</button>
+                <button class="filter-btn">Rock</button>
+                <button class="filter-btn">Electrónica</button>
+                <!-- Agrega más botones de filtro según sea necesario -->
+            </div>
+            <div class="user-profile">
+                <img src="slade.png" alt="Avatar del usuario" class="avatar">
+                <p>¡Hola, Vector!</p>
+            </div>
+        </section>
+    </div>
+    <script src="/PANTALLADEINICIO/INICIO.js"></script>
+</body>
+
+</html>
