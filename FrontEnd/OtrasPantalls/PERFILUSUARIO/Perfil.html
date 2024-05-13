@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Perfil.css">
+    <link rel="stylesheet" href="/FrontEnd/OtrasPantalls/PERFILUSUARIO/Perfil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wdth,wght@75..125,100..800&display=swap" rel="stylesheet">
     <title>Perfil de Usuario</title>
 </head>
 <body>   
     <div class="sidebar">
         <div class="user-profile">
+           
             <img src="/FrontEnd/slade.png" alt="Foto de perfil">
             <h3>Nombre de Usuario</h3>
             <br>
@@ -28,7 +32,7 @@
             <li><a href="#">Artistas</a></li>
         </ul>
     </div>
-        
+    
         <div class="container">
             <h2>DATOS USUARIO</h2>
         <form id="registerForm" enctype="multipart/form-data">
@@ -64,8 +68,8 @@
             <input type="submit" value="Guardar cambios" disabled>
         </div>
         </form>
-    </div>
-
+    
+    
     <script>
         function enableEdit() {
             document.getElementById("username").readOnly = false;

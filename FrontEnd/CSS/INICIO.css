@@ -1,8 +1,16 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Anek Latin', sans-serif;
     background-color: #f8f8f8;
     margin: 0;
     padding: 0;
+
+    background: linear-gradient(270deg, #232122, #0054bc, #001c5a);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 4s ease infinite;
+    -moz-animation: AnimationName 4s ease infinite;
+    -o-animation: AnimationName 4s ease infinite;
+    animation: AnimationName 4s ease infinite;
 }
 
 .container {
@@ -211,4 +219,25 @@ nav a:hover {
 
 .like-button:hover {
     background-color: #c0392b;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }

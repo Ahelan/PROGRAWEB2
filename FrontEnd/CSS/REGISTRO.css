@@ -1,15 +1,23 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Anek Latin', sans-serif;
     background-color: #191414;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+
+    background: linear-gradient(270deg, #232122, #0054bc, #001c5a);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 4s ease infinite;
+    -moz-animation: AnimationName 4s ease infinite;
+    -o-animation: AnimationName 4s ease infinite;
+    animation: AnimationName 4s ease infinite;
 }
 
 .container {
-    background-color: #006b25;
+    background-color: #05831a;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(9, 102, 0, 0.856);
@@ -42,7 +50,7 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #000000;
+    color: black;
 }
 
 input {
@@ -83,3 +91,23 @@ button:hover {
     font-weight: bold;
 }
 
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
