@@ -16,8 +16,9 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         const data = await response.json();
         if (data.success) {
             // Si el inicio de sesión es exitoso, muestra un mensaje de bienvenida
-            alert('¡Bienvenido, ' + username + '!');
-           // window.location.href = 'REGISTRO.html';
+            //alert('¡Bienvenido, ' + username + '!');
+            window.location.href = '../PANTALLADEINICIO/INICIO.html';
+
         } else {
             // Si el inicio de sesión falla, muestra un mensaje de error
             alert('Error: ' + data.message);
