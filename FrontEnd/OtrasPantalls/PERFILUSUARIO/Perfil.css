@@ -1,133 +1,147 @@
-.profile {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-label {
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[type="submit"],
-input[type="button"] {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="submit"]:disabled,
-input[type="button"]:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.container {
-    position: fixed;
-    width: 400px;
-    top: 80px;
-    left: 500px;
-    
-    background-color: #3a28df;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(9, 101, 223, 0.856);
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-}
-
-* {
-    margin: 0px;
-    padding: 0px;
-  }
-  
-
-.sidebar {
-    position: fixed;
-    width: 250px;
-    height: 100%;
-    background: #151719;
-    left: 0px;
-
-}
-#sidebar.active {
-    left: 0px;
-  }
-  
-
-.user-profile img {
-    width: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.menu {
-    list-style: none;
+body {
+    font-family: 'Anek Latin', sans-serif;
+    background: linear-gradient(270deg, #232122, #0054bc, #001c5a);
+    background-size: 600% 600%;
+    animation: changeBackgroundColor 4s ease infinite;
+    margin: 0;
     padding: 0;
 }
 
-.menu li {
-    margin-bottom: 20px;
+@keyframes changeBackgroundColor {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.menu a {
-    text-decoration: none;
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #599c88;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 228, 30, 0.568);
+}
+
+header h1 {
+    text-align: center;
     color: #fff;
+}
+
+header {
+    background: linear-gradient(270deg, #00f70c, #069fdb, #008346);
+    background-size: 600% 600%;
+    animation: changeBackgroundColor 4s ease infinite;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes changeBackgroundColor {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.navbar-brand img {
+    width: 150px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+.title {
+    font-size: 44px;
+    color: #ffffff;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #01ff01;
+}
+
+
+.user-info,
+.uploaded-songs {
+    margin-top: 20px;
+}
+
+.user-details {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+.user-details label {
     font-weight: bold;
 }
 
-.menu a:hover {
-    color: #ff9900;
+.user-details input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.css-selector {
-    background: linear-gradient(357deg, #1816e4, #000000);
-    background-size: 400% 400%;
-
-    -webkit-animation: AnimationName 22s ease infinite;
-    -moz-animation: AnimationName 22s ease infinite;
-    -o-animation: AnimationName 22s ease infinite;
-    animation: AnimationName 22s ease infinite;
+.user-details input:read-only {
+    background-color: #f0f0f0;
 }
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:53% 0%}
-    50%{background-position:48% 100%}
-    100%{background-position:53% 0%}
+button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-@-moz-keyframes AnimationName {
-    0%{background-position:53% 0%}
-    50%{background-position:48% 100%}
-    100%{background-position:53% 0%}
+
+button:hover {
+    background-color: #45a049;
 }
-@-o-keyframes AnimationName {
-    0%{background-position:53% 0%}
-    50%{background-position:48% 100%}
-    100%{background-position:53% 0%}
+
+
+.user-profile {
+    display: flex;
+    align-items: center;
 }
-@keyframes AnimationName {
-    0%{background-position:53% 0%}
-    50%{background-position:48% 100%}
-    100%{background-position:53% 0%}
+
+.user-profile img {
+    width: 40px; /* Ajusta el tamaño de la imagen del avatar según sea necesario */
+    height: 40px; /* Ajusta el tamaño de la imagen del avatar según sea necesario */
+    border-radius: 50%; /* Para que la imagen del avatar sea redonda */
+    margin-right: 10px; /* Espacio entre la imagen del avatar y el texto */
+}
+
+.user-profile p {
+    margin: 0; /* Elimina el margen del párrafo */
+    font-weight: bold; /* Hace que el nombre de usuario sea en negrita */
+    color: #ffffff; /* Color del texto */
 }

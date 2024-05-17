@@ -15,76 +15,34 @@
     <div class="container">
         <header>
             <a class="navbar-brand" href="INICIO.html">
-                <img src="Logo2.png" sidth="775" height="80">
-            </a>            <h1 class="title">BeatSpot</h1>
+                <img src="Logo2.png" class="logo">
+            </a>
+            <h1 class="title">BeatSpot</h1>
             <nav>
                 <a href="./INICIO.html">Inicio</a>
-                
-                <a href="/PERFILUSUARIO/PUSUARIO.html">Perfil</a>
+                <a href="/FrontEnd/OtrasPantalls/PERFILUSUARIO/Perfil.html">Perfil</a>
             </nav>
-            
-
+            <div class="search-profile">
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Buscar canciones...">
+                    <button id="searchButton">Buscar</button>
+                </div>
+                <div class="user-profile">
+                    <img src="slade.png" alt="Avatar del usuario" class="avatar">
+                    <p>¡Hola, Karla!</p>
+                    <button onclick="cerrarSesion()">Cerrar sesión</button>
+                </div>
+            </div>
         </header>
         <section class="song-list">
-            <article class="song" data-audio="Linkin Park - Lost.mp3">
-                <img src="LP.jpg" alt="Portada del Álbum 1" class="album-cover">
-                <div class="song-details">
-                    <h3 class="song-title">Lost</h3>
-                    <p class="artist">Linkin Park</p>
-                    <p class="uploader">Subido por: Vector</p>
-                    <p class="plays">Reproducciones: 100</p>
-                </div>
-                <button class="play-button" onclick="togglePlayPause(this)">▶️ Reproducir</button>
-                <button class="like-button" onclick="toggleLike('playButton1')">❤️ Like</button>
-                <p class="likes-count" id="likesCount1">Likes: 0</p>
-
-                <audio class="audio-element" src="Linkin Park - Lost.mp3"></audio>
-            </article>
-            <!-- Repite esta estructura para más canciones -->
-
-            <article class="song" data-audio="Doing It Right- Daft Punk.mp3">
-                <img src="DP.jpeg" alt="Portada del Álbum 2" class="album-cover">
-                <div class="song-details">
-                    <h3 class="song-title">Doin' it Right</h3>
-                    <p class="artist">Daft Punk</p>
-                    <p class="uploader">Subido por: Vector </p>
-                    <p class="plays">Reproducciones: 150</p>
-                </div>
-                <button class="play-button" onclick="togglePlayPause(this)">▶️ Reproducir</button>
-                <audio class="audio-element" src="Doing It Right- Daft Punk.mp3"></audio>
-            </article>
-
-            <article class="song" data-audio="Doing It Right- Daft Punk.mp3">
-                <img src="ACDC.jpg" alt="Portada del Álbum 2" class="album-cover">
-                <div class="song-details">
-                    <h3 class="song-title">Back In Black</h3>
-                    <p class="artist">AC/DC</p>
-                    <p class="uploader">Subido por: Vector </p>
-                    <p class="plays">Reproducciones: 250</p>
-                </div>
-                <button class="play-button" onclick="togglePlayPause(this)">▶️ Reproducir</button>
-                <audio class="audio-element" src="DC - Back In Black.m4a"></audio>
-            </article>
-
+            <!-- Canciones predefinidas -->
         </section>
         <section class="features">
-            <div class="search">
-                <label for="searchInput">Buscar:</label>
-                <input type="text" id="searchInput" placeholder="Buscar canciones, artistas, etc.">
-                <!-- Dentro de la sección .search -->
-                <button id="searchButton">Buscar</button>
-
-            </div>
-            <div class="filters">
-                <h2>Filtros</h2>
-                <button class="filter-btn">Pop</button>
-                <button class="filter-btn">Rock</button>
-                <button class="filter-btn">Electrónica</button>
-                <!-- Agrega más botones de filtro según sea necesario -->
-            </div>
-            <div class="user-profile">
-                <img src="slade.png" alt="Avatar del usuario" class="avatar">
-                <p>¡Hola, Karla!</p>
+            <div class="song-controls">
+                <h2>Gestión de Canciones</h2>
+                <input type="file" id="songFileInput" accept="audio/*">
+                <input type="text" id="songTitleInput" placeholder="Título de la canción">
+                <button id="addSongButton">Agregar Canción</button>
             </div>
         </section>
     </div>

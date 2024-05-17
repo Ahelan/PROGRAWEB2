@@ -1,82 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/FrontEnd/OtrasPantalls/PERFILUSUARIO/Perfil.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wdth,wght@75..125,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wdth,wght@75..125,100..800&display=swap"
+        rel="stylesheet">
     <title>Perfil de Usuario</title>
-</head>
-<body>   
-    <div class="sidebar">
-        <div class="user-profile">
-           
-            <img src="/FrontEnd/slade.png" alt="Foto de perfil">
-            <h3>Nombre de Usuario</h3>
-            <br>
-        </div>
-        <ul class="menu">
-            <li><a href="/FrontEnd/OtrasPantalls/PANTALLADEINICIO/INICIO.html">Inicio</a></li>
-            <li><a href="/FrontEnd/OtrasPantalls/PERFILUSUARIO/PUSUARIO.html">Perfil</a></li>
-            <li><a href="/FrontEnd/LOGIN.html">Cerrar sesión</a></li>
-        </ul>
-        
-
-        <h3>TU MUSICA</h3>
-        <br>
-        <ul class="menu">
-            <li><a href="#">Canciones</a></li>
-            <li><a href="#">Albums</a></li>
-            <li><a href="#">Artistas</a></li>
-        </ul>
-    </div>
-    
-        <div class="container">
-            <h2>DATOS USUARIO</h2>
-        <form id="registerForm" enctype="multipart/form-data">
-        
-
-
-            <div class="input-group">
-                <label for="username">Nombre de Usuario:</label>
-                <input type="text" id="username" value="NOMBRE DE USUARIO" readonly>
-                <br>
-                <br>
-            </div>
-            <div class="input-group">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" value="CORREO" readonly>
-                <br>
-                <br>
-            </div>
-            <div class="input-group">
-                <label for="password">Contraseña:</label>
-                <input type="text" id="password" value="PASSWORD" readonly >
-                <br>
-                <br>
-            </div>
-            <div class="input-group">
-                <label for="profilePicture">Foto de Perfil:</label>
-                <input type="file" id="profilePicture" accept="image/*" readonly>
-                <br>
-                <br>
-            </div>
-
-            <input type="button" value="Editar" onclick="enableEdit()">
-            <input type="submit" value="Guardar cambios" disabled>
-        </div>
-        </form>
-    
-    
-    <script>
-        function enableEdit() {
-            document.getElementById("username").readOnly = false;
-            document.getElementById("email").readOnly = false;
-            document.getElementById("password").readOnly = false;
-            document.querySelector("input[type='submit']").disabled = false;
+    <style>
+        .form-buttons {
+            margin-top: 10px;
         }
-    </script>
+    </style>
+</head>
+
+<body>
+    <header>
+        <a class="navbar-brand" href="/FrontEnd/INICIO.html">
+            <img src="../LOGIN Y REGISTRO/Logo2.png" width="775" height="80">
+        </a>
+        <h1 class="title">BeatSpot</h1>
+        <nav>
+            <a href="/FrontEnd/INICIO.html">Inicio</a>
+            <a href="/FrontEnd/OtrasPantalls/PERFILUSUARIO/Perfil.html">Perfil</a>
+            <div class="user-profile">
+                <img src="/FrontEnd/slade.png" alt="Avatar del usuario" class="avatar">
+                <p>¡Hola, Karla!</p>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <header>
+            <h1>Perfil de Usuario</h1>
+        </header>
+        <section class="user-info">
+            <h2>Datos de Usuario</h2>
+            <form id="user-info-form">
+                <div class="user-details">
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" value="NombreUsuario" readonly required>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" value="usuario@example.com" readonly required>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" value="*********" readonly required>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" onclick="editUserInfo()">Editar</button>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="save-button" style="display: none;">Guardar</button>
+                </div>
+            </form>
+        </section>
+        <section class="uploaded-songs">
+            <h2>Canciones Subidas</h2>
+            <div class="song-list">
+                <!-- Aquí se mostrarán las canciones subidas por el usuario -->
+            </div>
+        </section>
+    </div>
+    <script src="./PUSUARIO.js"></script>
 </body>
+
 </html>
