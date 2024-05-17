@@ -1,17 +1,18 @@
-const mongoose = require('mongoose');
-const multer = require('multer');
+const express = require('express');
+require("./db")
+const router = require('./routes');
 
+const app = express();
+const port = 3000;
 
-async function connect(){
-    try {
-        await mongoose.connect(
-            'mongodb+srv://admin:admin@proyectospotify.zjjznpj.mongodb.net/?retryWrites=true&w=majority&appName=proyectoSpotify'
-        );
+// Importar el módulo cors para habilitar CORS
 
-        console.log('Connected to MongoDB')
-      } catch (error) {
-        console.log(error);
-      }
-}
+app.use(express.json())
 
-connect();
+app.use(router);
+
+// Iniciar el servidor y escuchar en el puerto especificado
+app.listen(port, () => {
+  console.log(`Servidor corriendo en http://localhost:${port}`);
+});
+
